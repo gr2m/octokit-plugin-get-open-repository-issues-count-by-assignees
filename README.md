@@ -87,7 +87,9 @@ const result = await octokit.getOpenRepositoryIssuesCountByAssignees({
       </td>
     </tr>
   </tbody>
-</table>## Contributing
+</table>
+
+## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md)
 
