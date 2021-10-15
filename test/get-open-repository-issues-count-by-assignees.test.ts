@@ -10,7 +10,7 @@ test("README example", async () => {
   octokit.hook.wrap("request", (_request, options) => {
     expect(options.query).toEqual(
       `
-    query(\$owner:string!,\$repo:string!) {
+    query(\$owner:String!,\$repo:String!) {
       repository(owner:\$owner, name:\$repo) {
         issues0:issues(first:1,states:OPEN,filterBy:{assignee:"user1"}) { totalCount }
         issues1:issues(first:1,states:OPEN,filterBy:{assignee:"user2"}) { totalCount }

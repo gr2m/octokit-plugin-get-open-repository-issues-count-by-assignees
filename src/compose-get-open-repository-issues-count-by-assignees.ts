@@ -28,7 +28,7 @@ export async function composeGetOpenRepositoryIssuesCountByAssignees(
       `issues${index}:issues(first:1,states:OPEN,filterBy:{assignee:"${login}"}) { totalCount }`
   );
   const query = `
-    query($owner:string!,$repo:string!) {
+    query($owner:String!,$repo:String!) {
       repository(owner:$owner, name:$repo) {
         ${userIssuesNode.join("\n        ")}
       }
